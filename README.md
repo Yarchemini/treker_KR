@@ -7,6 +7,9 @@
 2. Запустите программу: python main.py
 3. Запустите тесты: pytest --cov=src --cov-report=html
 
+
+
+
 ## Отчёт о покрытии тестами (76%)
 Подробный HTML-отчёт находится в папке htmlcov/index.html.
 
