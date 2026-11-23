@@ -1,0 +1,34 @@
+﻿# Aeroplane Tracker
+
+Консольное приложение на Python для отслеживания самолётов в воздушном пространстве выбранной страны в реальном времени.
+
+## Источники данных
+- **Nominatim (OpenStreetMap)** — получение географических границ (oundingbox) страны.
+- **OpenSky Network API** — получение данных о воздушных судах в заданных координатах.
+
+## Установка и запуск
+1. Установите зависимости:
+   `ash
+   pip install -r requirements.txt
+   `
+2. Запустите программу:
+   `ash
+   python main.py
+   `
+3. Запустите тесты и проверку покрытия:
+   `ash
+   pytest --cov=src --cov-report=term-missing
+   `
+"@ | Set-Content -Path "README.md" -Encoding UTF8
+
+# 1. Генерируем HTML-отчёт о покрытии в папку htmlcov/
+pytest --cov=src --cov-report=html
+
+# 2. Создаём .gitignore (папку htmlcov НЕ игнорируем, чтобы отчёт ушёл в Git)
+@"
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.idea/
